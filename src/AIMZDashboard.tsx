@@ -34,10 +34,10 @@ export default function AIMZDashboard() {
   };
 
   return (
-    <div className={`min-h-screen p-8 transition-colors duration-200 ${darkMode ? "dark bg-[#121826] text-white" : "bg-[#f4f7fc] text-gray-900"}`}>
+    <div className={`min-h-screen p-4 sm:p-8 transition-colors duration-200 ${darkMode ? "dark bg-[#121826] text-white" : "bg-[#f4f7fc] text-gray-900"}`}>
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-6xl font-extrabold drop-shadow-md tracking-wide uppercase text-[#4A90E2] dark:text-[#A0C1E8]">AI-MZ Dashboard</h1>
+        <div className="flex flex-wrap gap-4 justify-between items-center mb-8">
+          <h1 className="text-4xl sm:text-6xl font-extrabold drop-shadow-md tracking-wide uppercase text-[#4A90E2] dark:text-[#A0C1E8]">AI-MZ Dashboard</h1>
           <Button 
             className="relative bg-[#4A90E2] text-white flex items-center px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow"
             onClick={() => setDarkMode(!darkMode)}
@@ -48,7 +48,7 @@ export default function AIMZDashboard() {
         
         {/* Tabs for Navigation */}
         <Tabs defaultValue="repository">
-          <TabsList className="flex space-x-4 bg-gray-300 dark:bg-gray-800 p-4 rounded-xl border border-gray-400 dark:border-gray-600">
+          <TabsList className="flex flex-wrap gap-2 sm:gap-4 bg-gray-300 dark:bg-gray-800 p-4 rounded-xl border border-gray-400 dark:border-gray-600">
             <TabsTrigger value="repository"><FileText size={20}/> Contract Repository</TabsTrigger>
             <TabsTrigger value="upload"><Upload size={20}/> Upload File</TabsTrigger>
             <TabsTrigger value="editor"><RefreshCw size={20}/> Contract Editor</TabsTrigger>
