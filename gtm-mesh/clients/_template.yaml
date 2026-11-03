@@ -1,0 +1,67 @@
+# Example of a FULL client profile (files starting with "_" are ignored by `cycle all`).
+# Copy to clients/<slug>.yaml, or let `gtm-mesh new <slug> --website <url>` fill it in for you.
+slug: example
+name: Example Co
+website: https://example.com
+one_liner: Example Co cuts subscription churn for self-serve SaaS by catching cancel intent early.
+product: >
+  Drop-in API and Shopify app that predicts which subscribers are about to cancel and triggers
+  a save offer. Self-serve signup; enterprise pilots via a scoped design partnership.
+pricing: Starts at $99/month; enterprise pilots scoped per partner.
+differentiators:
+- Live in under an hour via API or Shopify app
+- Works on small datasets, so early-stage companies get value in week one
+- Pays for itself if it saves one in fifty cancellations
+competitors:
+- Churnkey
+- In-house retention flows (status quo)
+proof_points:
+- 'Replace with real, public proof only (customers, metrics, funding) and a source URL'
+funnels:
+- name: quick_adopters
+  description: Self-serve startups that can try it this week and give fast feedback.
+  criteria:
+  - Public pricing page with a monthly plan (no "book a demo" only)
+  - Subscription or recurring-purchase business model
+  - Seed to Series A, or YC-style
+  target_accounts: 150
+- name: growth
+  description: Series A+ companies with real data and budget, after quick adopters prove the case.
+  criteria:
+  - Raised Series A or later in the last 24 months
+  - Hiring for growth, lifecycle or retention roles
+  target_accounts: 60
+- name: design_partners
+  description: 1-3 flagship brands for scoped 1-3 month pilots that skip full procurement.
+  criteria:
+  - Recognizable consumer or commerce brand
+  - Public signal of churn, retention or margin pressure
+  target_accounts: 10
+exclude:
+- Existing customers
+- Companies with an active in-house build of the same thing
+channels: [email, linkedin]
+content_channels: [linkedin, x, reddit, blog, directory_listing]
+weekly_hooks:
+- Free trials hide churn until month two
+- What one saved cancellation is worth at $99/month
+voice:
+  sender_name: Aroob Manzoor
+  sender_title: GTM Lead
+  tone: warm, direct, specific, zero hype
+  call_to_action: a 15-minute call this week
+  banned_phrases: [I hope this email finds you well, synergy, game-changer, revolutionize, quick question]
+  signature: |
+    Aroob
+    Example Co
+cadence:
+  accounts_per_run: 20
+  drafts_per_run: 10
+  content_pieces_per_run: 6
+  min_fit_score_for_outreach: 6
+  research_refresh_days: 7
+models:
+  model: claude-opus-5-5
+  effort: high
+  max_usd_per_agent_run: 8.0
+notes: ''

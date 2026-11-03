@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gtm-mesh"
+version = "0.1.0"
+description = "AI-MZ GTM mesh: Claude agents for research, lead-finding, outreach drafts, content and weekly reports."
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=2.4,<3",
+    "pydantic>=2.6",
+    "pyyaml>=6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+gtm-mesh = "gtm_mesh.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gtm_mesh*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

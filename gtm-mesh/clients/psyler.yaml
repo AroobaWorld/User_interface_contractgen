@@ -1,0 +1,41 @@
+# Psyler - GTM mesh profile.
+# Fastest way to fill this in: gtm-mesh new psyler --website https://<their-site> --notes "<what you know>"
+# The profile agent researches them and writes product, pricing, funnels, hooks, etc. into this file.
+# Then read it over and fix anything that's off before the first cycle.
+slug: psyler
+name: Psyler
+website: ''          # TODO: add their website
+one_liner: ''
+product: ''
+pricing: ''
+differentiators: []
+competitors: []
+proof_points: []
+funnels: []
+exclude: []
+channels: [email, linkedin]
+content_channels: [linkedin, x, reddit, blog, directory_listing]
+weekly_hooks: []
+voice:
+  sender_name: Aroob Manzoor
+  sender_title: ''   # TODO: e.g. GTM Lead at Psyler
+  tone: warm, direct, specific, zero hype
+  call_to_action: a 15-minute call this week
+  banned_phrases:
+  - I hope this email finds you well
+  - synergy
+  - game-changer
+  - revolutionize
+  - quick question
+  signature: ''
+cadence:
+  accounts_per_run: 20
+  drafts_per_run: 10
+  content_pieces_per_run: 6
+  min_fit_score_for_outreach: 6
+  research_refresh_days: 7
+models:
+  model: claude-opus-5-5
+  effort: high
+  max_usd_per_agent_run: 8.0
+notes: ''

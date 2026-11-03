@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.aimz.gtm-mesh.daily</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>__MESH_HOME__/deploy/run.sh</string>
+    <string>daily</string>
+  </array>
+  <!-- Tuesday to Friday 7:13am local time: small top-up of leads and drafts. -->
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Weekday</key><integer>2</integer><key>Hour</key><integer>7</integer><key>Minute</key><integer>13</integer></dict>
+    <dict><key>Weekday</key><integer>3</integer><key>Hour</key><integer>7</integer><key>Minute</key><integer>13</integer></dict>
+    <dict><key>Weekday</key><integer>4</integer><key>Hour</key><integer>7</integer><key>Minute</key><integer>13</integer></dict>
+    <dict><key>Weekday</key><integer>5</integer><key>Hour</key><integer>7</integer><key>Minute</key><integer>13</integer></dict>
+  </array>
+  <key>StandardOutPath</key><string>__MESH_HOME__/logs/launchd-daily.out</string>
+  <key>StandardErrorPath</key><string>__MESH_HOME__/logs/launchd-daily.err</string>
+</dict>
+</plist>
